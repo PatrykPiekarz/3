@@ -6,23 +6,29 @@ class sito:
     n=0
 
     def __init__(self,n):
-        i=2
-        while i <= self.n:
-            self.boles.append(1)
-            return
+        self.n=n
+        i=1
+        while i != self.n+1:
+            self.boles.append(i)
+            i+=1
+        return
 
     def sito(self):
-
         m=self.n**0.5
-        i=2
+        boles=self.boles
+        i=1
         while i < m:
-            if self.boles[i-2] == 1:
-                j=i**2
-                while j < self.n:
-                    self.boles[j]=0
-                    j+=i
-            i+=1
-
-
-
+            for j in boles:
+                if (not (j % i) and not (i == j)) and i != 1:
+                    boles.remove(j)
+            j = boles.index(i) + 1
+            i = boles[j]
         return
+
+n = int(raw_input("podaj gorny zakres"))
+x = sito(n)
+x.sito()
+for i in x.boles:
+    print i
+i=0
+
