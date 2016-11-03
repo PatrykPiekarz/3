@@ -2,7 +2,7 @@
 a=raw_input("podaj liczbe a\n")
 a=int(a)
 b=raw_input("podaj liczbe b\n")
-b=int(a)
+b=int(b)
 n=a
 m=b
 
