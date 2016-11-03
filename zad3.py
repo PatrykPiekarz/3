@@ -28,7 +28,11 @@ class sito:
 n = int(raw_input("podaj gorny zakres"))
 x = sito(n)
 x.sito()
+x.boles.remove(1)
+j=0
 for i in x.boles:
-    print i
+    print "%-3i" % (i),
+    j+=1
+    if (j%10==0):
+        print
 i=0
-
